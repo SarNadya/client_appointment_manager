@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import './index.sass';
+import './styles/index.sass';
 import { Link } from 'react-router-dom';
 import { NotesPageAsync } from './pages/NotesPage/NotesPage.async';
 import { VideosPageAsync } from './pages/VideosPage/VideosPage.async';
