@@ -1,13 +1,39 @@
 @import "reset"
-// @import "fonts"
+@import "fonts"
 
-.app
+*
   font-family: 'SF Pro Display', 'Times New Roman', Serif
   font-weight: 400
   font-size: 14px
   line-height: 24px
+
+.app
+  background: #F1F2F3
   color: #161718
+  max-width: 1920px
+  min-width: 375px
   min-height: 100vh
 
   a
     color: #4198C5
+
+  .header
+    text-align: center
+    height: 50px
+    line-height: 50px
+    background: #fff
+    margin-bottom: 40px
+
+  .layout
+    justify-content: center
+    background: #F1F2F3
+
+    .sider
+      background: #F1F2F3
+      // background: #fff
+
+    .content
+      background: #fff
+      padding: 10px
+      width: 744px
+      height: 100%

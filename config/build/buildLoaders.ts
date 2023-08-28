@@ -30,13 +30,13 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
   }
 
   const fileLoader = {
-    test: /\.(png|jpe?g|gif|otf|)$/i,
+    test: /\.(png|jpe?g|gif|otf)$/i,
     use: 'file-loader',
   }
 
   return [
+    fileLoader,
     typescriptLoader,
     cssLoader,
-    fileLoader,
   ]
 }

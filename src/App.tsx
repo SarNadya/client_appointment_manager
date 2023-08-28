@@ -1,39 +1,25 @@
-import { Route, Routes } from 'react-router-dom';
 import './styles/index.sass';
-import { Link } from 'react-router-dom';
-import { NotesPageAsync } from './pages/NotesPage/NotesPage.async';
-import { VideosPageAsync } from './pages/VideosPage/VideosPage.async';
-import { EventsPageAsync } from './pages/EventsPage/EventsPage.async';
-import { ConsultationsPageAsync } from './pages/ConsultationsPage/ConsultationsPage.async';
-import { Suspense } from 'react';
+import { Layout, Space } from 'antd';
+import Main from './components/Main';
+import ClientList from './components/ClientList/ClientList';
 
 const App = () => {
+  const { Header, Sider, Content } = Layout;
   return (
     <div className='app'>
-      <Link to={'/notes'}>Заметки</Link>
-      <Link to={'/consultations'}>Консультации</Link>
-      <Link to={'/videos'}>Видео</Link>
-      <Link to={'/events'}>Мероприятия</Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route
-            path={'/notes'}
-            element={<NotesPageAsync/>}
-          />
-          <Route
-            path={'/consultations'}
-            element={<ConsultationsPageAsync/>}
-          />
-          <Route
-            path={'/videos'}
-            element={<VideosPageAsync/>}
-          />
-          <Route
-            path={'/events'}
-            element={<EventsPageAsync/>}
-          />
-        </Routes>
-      </Suspense>
+      <Layout style={{ background: '#F1F2F3' }}>
+        <Header className='header'></Header>
+        <Layout hasSider className='layout'>
+          <Space size={20}>
+            <Sider width={'374px'} className='sider'>
+              <ClientList/>
+            </Sider>
+            <Content className='content'>
+              <Main/>
+            </Content>
+          </Space>
+        </Layout>
+      </Layout>
     </div>
   );
 };
