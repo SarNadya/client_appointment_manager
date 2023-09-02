@@ -1,6 +1,6 @@
 import './styles/index.sass';
 import { Layout, Space } from 'antd';
-import Main from './components/Main';
+import Main from './components/Main/Main';
 import ClientList from './components/ClientList/ClientList';
 
 const App = () => {
@@ -12,10 +12,10 @@ const App = () => {
         <Layout hasSider className='layout'>
           <Space size={20}>
             <Sider width={'374px'} className='sider'>
-              <ClientList/>
+              <ClientList />
             </Sider>
             <Content className='content'>
-              <Main/>
+              <Main />
             </Content>
           </Space>
         </Layout>
