@@ -1,8 +1,7 @@
 import { Card } from 'antd';
-import React from 'react';
 import styles from './ClientHeader.module.sass';
 import client from '../../components/img/client_icon.png';
-import { EllipsisOutlined } from '@ant-design/icons';
+import DropDown from '../DropDown/DropDown';
 
 const ClientHeader = () => {
   return (
@@ -15,7 +14,7 @@ const ClientHeader = () => {
             <p>30 лет, муж</p>
           </div>
         </div>
-        <button><EllipsisOutlined twoToneColor="#eb2f96"/></button>
+        <DropDown/>
       </div>
     </Card>
   );

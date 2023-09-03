@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ConsultationPage.module.sass';
 import video from '../../components/img/video.png';
-import meeting from '../../components/img/meeting.png';
+import { UserOutlined } from '@ant-design/icons';
 
 const ConsultationsPage = () => {
   return (
@@ -26,7 +26,7 @@ const ConsultationsPage = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.icon}>
-          <img src={meeting} alt="video.img" />
+          <UserOutlined style={{ color: '#fff', margin: '0 auto' }}/>
         </div>
         <div>
           <p>Личный приём</p>
